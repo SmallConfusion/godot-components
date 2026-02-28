@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c2k8fqohfo03d"]
+
+[ext_resource type="Script" uid="uid://c6c5shrojdwt" path="res://keybind_menu/bits/action_bind_component.gd" id="1_r5pdp"]
+
+[node name="ActionBindComponent" type="VBoxContainer" unique_id=65193472]
+script = ExtResource("1_r5pdp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1606672197]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=941001631]
+layout_mode = 2
+text = "action name"
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=1907720188]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1994159778]
+layout_mode = 2
+text = "+"
+
+[node name="BindingContainer" type="VBoxContainer" parent="." unique_id=1857445482]
+layout_mode = 2
