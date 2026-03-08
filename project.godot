@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 InputMapManager="*uid://clertc6jl4i02"
+Settings="*uid://crho604ktqtrd"
 
 [dotnet]
 
