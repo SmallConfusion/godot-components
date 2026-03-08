@@ -12,6 +12,9 @@ static func with_bag(items: Array) -> RandomBag:
 	new.choices = items
 	return new
 
+static func with_choices(...values: Array) -> RandomBag:
+	return with_bag(values)
+
 ## Creates a bag. Items is Array[[element: Variant, count: int]]
 static func with_count(items: Array) -> RandomBag:
 	var new := RandomBag.new()
