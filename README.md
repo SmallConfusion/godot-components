@@ -1,0 +1,1 @@
+This is a small collection of tools and scripts I reuse between projects. This isn't built with the intention of having other people use it, but I'm publishing it because someone might find it useful.
