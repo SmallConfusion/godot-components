@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  BUTLER: '{{default "butler" .BUTLER}}'
+
+tasks:
+  push:
+    requires:
+      vars:
+        - SRC
+        - GAME
+        - CHANNEL
+
+    sources:
+      - "{{.SRC}}/*"
+
+    label: "butler push {{.GAME}}:{{.CHANNEL}}"
+
+    cmds:
+      - "{{.BUTLER}} push {{.SRC}} {{.GAME}}:{{.CHANNEL}}"

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  GIMP: '{{default "gimp" .GIMP}}'
+
+tasks:
+  export:
+    requires:
+      vars:
+        - SRC
+        - OUT
+
+    label: "gimp export {{.SRC}}"
+    sources:
+      - "{{.SRC}}"
+    generates:
+      - "{{.OUT}}"
+    cmds:
+      - >
+        {{.GIMP}} -i --quit --batch-interpreter plug-in-script-fu-eval -b '
+        (let* ((image (car (gimp-file-load RUN-NONINTERACTIVE "{{.SRC}}" "{{.SRC}}"))))
+        {{if .GIMP_EXTRA}}{{.GIMP_EXTRA}}{{end}}
+        (file-png-export #:run-mode RUN-NONINTERACTIVE #:image image #:file "{{.OUT}}" )
+        (gimp-image-delete image))'

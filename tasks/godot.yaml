@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  GODOT: '{{default "godot4" .GODOT}}'
+
+tasks:
+  export:
+    label: "Godot export {{.SRC}} {{.TARGET}}"
+
+    requires:
+      vars:
+        - SRC
+        - TARGET
+        - OUT_DIR
+        - OUT_FILE
+
+    sources:
+      - "{{.SRC}}"
+
+    generates:
+      - "{{.OUT_DIR}}/*"
+
+    cmds:
+      - "mkdir -p {{.OUT_DIR}}"
+      - "{{.GODOT}} --headless --path {{.SRC}} --export-release {{.TARGET}} {{.OUT_DIR}}/{{.OUT_FILE}}"

@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+vars:
+  MATERIAL_MAKER: '{{default "material-maker" .MATERIAL_MAKER}}'
+
+tasks:
+  export:
+    requires:
+      vars:
+        - SRC
+        - OUT
+
+    label: "Material Maker export {{.SRC}}"
+    sources:
+      - "{{.SRC}}"
+    generates:
+      - "{{.OUT}}"
+
+    cmds: # We have to do this bullshit because godot breaks here.
+      - |
+        expect -c '
+          set timeout -1
+          set count 0
+          spawn {{.MATERIAL_MAKER}} --export-material --target Blender -o "{{.GEN_DIR}}" "{{.SRC}}"
+          expect {
+            "Done" {
+              incr count
+              if {$count < 2} { exp_continue }
+            }
+          }
+          exec kill 0
+        ' || true
