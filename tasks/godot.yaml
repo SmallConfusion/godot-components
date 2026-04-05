@@ -17,7 +17,7 @@ tasks:
         - OUT_FILE
 
     sources:
-      - "{{.SRC}}"
+      - "{{.SRC}}/**/*"
 
     generates:
       - "{{.OUT_DIR}}/*"
