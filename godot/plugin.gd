@@ -2,8 +2,8 @@
 extends EditorPlugin
 
 var autoloads: Array[Array] = [
-    [InputMapManager, "./keybind_menu/input_map_manager.gd"],
-    [Settings, "./settings/settings.gd],
+    ["InputMapManager", "./keybind_menu/input_map_manager.gd"],
+    ["Settings", "./settings/settings.gd"],
 ]
 
 

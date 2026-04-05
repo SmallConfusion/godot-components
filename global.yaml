@@ -21,8 +21,8 @@ tasks:
 
       - "git clone --depth 1 https://github.com/SmallConfusion/godot-components"
 
-      - "mkdir src/components"
-      - "mv godot-components/godot/* src/components/"
+      - "mkdir -p src/addons/components"
+      - "mv godot-components/godot/* src/addons/components/"
       - "mv godot-components/tasks/ ."
       - "mv tasks/Taskfile.yaml ."
       - "rm -rf godot-components/"
