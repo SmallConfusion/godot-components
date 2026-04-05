@@ -24,7 +24,7 @@ tasks:
       - "{{.GODOT}} -e --path src/"
 
   clean:
-    deps:
+    cmds:
       - "rm -rf export/"
 
   build:
