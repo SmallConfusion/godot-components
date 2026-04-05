@@ -23,4 +23,6 @@ tasks:
       - "mkdir src/components"
       - "mv godot-components/godot/ src/components/"
       - "mv godot-components/tasks/ ."
+      - "mv tasks/Taskfile.yaml ."
       - "rm -rf godot-components/"
+      - 'echo GODOT="{{.GODOT}}" > .env'

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+dotenv:
+  - ".env"
+
+includes:
+  GODOT_EXPORT: tasks/export/godot.yaml
+
+tasks:
+  default:
+    cmds:
+      - task: edit
+
+  edit:
+    requires:
+      vars:
+        - GODOT
+
+    cmds:
+      - "{{.GODOT}} -e --path src/"
+
+  clean:
+    deps:
+      - "rm -rf export/"
+
+  build:
+    requires:
+      vars:
+        - GODOT
+
+    generates:
+      - export/*
+
+    deps:
+      - task: GODOT_EXPORT:export
+        vars:
+          {
+            SRC: "src",
+            TARGET: "web",
+            OUT_DIR: "export/web/",
+            OUT_FILE: "index.html",
+          }
