@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+dotenv:
+  - "{{.HOME}}/.env"
+
+tasks:
+  godot-init:
+    requires:
+      vars:
+        - GODOT
+
+    dir: "{{.USER_WORKING_DIR}}"
+
+    cmds:
+      - "git init"
+      - "mkdir src/"
+      - "{{.GODOT}} --headless -e --quit --path ./src"
+
+      - "git clone --depth 1 https://github.com/SmallConfusion/godot-components"
+
+      - "mkdir src/components"
+      - "mv godot-components/godot/ src/components/"
+      - "mv godot-components/tasks/ ."
+      - "rm -rf godot-components/"
