@@ -2,9 +2,6 @@
 
 version: "3"
 
-dotenv:
-  - "{{.HOME}}/.env"
-
 tasks:
   godot-init:
     requires:

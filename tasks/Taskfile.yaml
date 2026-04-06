@@ -7,8 +7,8 @@ dotenv:
   - "{{.HOME}}/.env"
 
 includes:
-  GODOT_EXPORT: tasks/export/godot.yaml
-  BUTLER_TASK: tasks/export/butler.yaml
+  godot-export: tasks/export/godot.yaml
+  butler-task: tasks/export/butler.yaml
 
 tasks:
   default:
@@ -35,7 +35,7 @@ tasks:
       - src/**/*
 
     deps:
-      - task: GODOT_EXPORT:export
+      - task: godot-export:export
         vars:
           {
             SRC: "src",
@@ -52,7 +52,7 @@ tasks:
       - task: build
 
     cmds:
-      - task: BUTLER_TASK:push
+      - task: butler-task:push
         vars:
           {
             SRC: "export/web/",
