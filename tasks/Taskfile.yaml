@@ -7,8 +7,13 @@ dotenv:
   - "{{.HOME}}/.env"
 
 includes:
-  godot-export: tasks/export/godot.yaml
-  butler-task: tasks/export/butler.yaml
+  godot-export:
+    taskfile: tasks/export/godot.yaml
+    internal: true
+
+  butler-task:
+    taskfile: tasks/export/butler.yaml
+    internal: true
 
 tasks:
   default:
