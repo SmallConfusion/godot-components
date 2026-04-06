@@ -6,10 +6,12 @@ dotenv:
   - "{{.HOME}}/.env"
 
 tasks:
-  godot-init:
+  godot-init:*:
     requires:
       vars:
         - GODOT
+
+    vars: { GAME_NAME: "{{index .MATCH 0}}" }
 
     dir: "{{.USER_WORKING_DIR}}"
 
@@ -24,7 +26,13 @@ tasks:
       - "mkdir -p src/addons/components"
       - "mv godot-components/godot/* src/addons/components/"
       - "mv godot-components/tasks/ ."
+      - "mv godot-components/gitignore_template .gitignore"
       - "mv tasks/Taskfile.yaml ."
+
       - "rm -rf godot-components/"
       - "rm -f src/components/project.godot"
       - 'echo GODOT="{{.GODOT}}" > .env'
+      - "echo .godot/ > src/.gitignore"
+
+      - "git add ."
+      - 'git commit -m "Initial commit"'
