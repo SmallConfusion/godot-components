@@ -3,19 +3,21 @@
 version: "3"
 
 tasks:
-  godot-init:
+  godot-init:*:
     requires:
       vars:
         - GODOT
+
+    vars:
+      GAME_NAME: "{{index .MATCH 0}}"
+      FOLDER_NAME: '{{.GAME_NAME | lower | replace " " "_"}}'
 
     dir: "{{.USER_WORKING_DIR}}"
 
     cmds:
       - |
-        git init
-        mkdir src/
-        touch src/project.godot
-        {{.GODOT}} --headless -e --quit --path ./src
+        mkdir {{.FOLDER_NAME}}
+        cd {{.FOLDER_NAME}}
 
         git clone --depth 1 https://github.com/SmallConfusion/godot-components
 
@@ -27,8 +29,31 @@ tasks:
 
         rm -rf godot-components/
         rm -f src/components/project.godot
+
+        curl https://godotengine.org/assets/press/icon_color.svg -o src/icon.svg
+
+        echo '
+        config_version=5
+        [application]
+        config/name="{{.GAME_NAME}}"
+        ' > src/project.godot
+
         echo GODOT="{{.GODOT}}" > .env
         echo .godot/ > src/.gitignore
 
+        git init
         git add .
         git commit -m "Initial commit"
+
+      - silent: true
+        cmd: |
+          echo "
+          Initialized game {{.GAME_NAME}} in {{.FOLDER_NAME}}/.
+
+          Run
+
+          cd {{.FOLDER_NAME}}
+          task edit
+
+          to open the editor.
+          "
