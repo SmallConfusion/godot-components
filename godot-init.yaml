@@ -16,10 +16,10 @@ tasks:
 
     cmds:
       - "git clone --depth 1 https://github.com/SmallConfusion/godot-components"
-      - defer: "rm -rf godot-components/"
 
       - "mkdir src"
       - "mv godot-components/godot/* src"
+      - "mv godot-components/godot/.* src"
 
       - 'sed -i src/project.godot -e "s/PLACEHOLDER_NAME/{{.GAME_NAME}}/"'
 
@@ -29,7 +29,9 @@ tasks:
 
       - 'echo GODOT="{{.GODOT}}" > .env'
 
-      - "{{.GODOT}} -e --path src --headless --quit"
+      - "{{.GODOT}} -e --path src --headless --quit-after 5"
+
+      - "rm -rf godot-components/"
 
       - "git init"
       - "git add ."
@@ -43,7 +45,7 @@ tasks:
           Run
 
           cd {{.FOLDER_NAME}}
-          task edit
+          task
 
           to open the editor.
           "

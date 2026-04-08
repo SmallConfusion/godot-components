@@ -1,3 +1,5 @@
+@tool
+
 class_name Setting
 extends Resource
 
@@ -20,6 +22,8 @@ func get_value() -> Variant:
 	return Settings.config.get_value(section_name, key_name, default_value)
 
 func set_value(value: Variant) -> void:
+	assert(not Engine.is_editor_hint())
+	
 	print("Setting set: ", display_name, value)
 	Settings.config.set_value(section_name, key_name, value)
 	Settings.save()
