@@ -51,12 +51,26 @@ tasks:
 
   publish:
     sources:
+      - src/**/*
+
+    generates:
       - export/**/*
 
     deps:
       - task: build
 
     cmds:
+      - "cp src/gen/build_info.gd ."
+
+      - defer: "rm build_info.gd"
+      - defer: "mv build_info.gd src/gen/build_info.gd"
+
+      - |
+        sed -e "s/PLACEHOLDER_GIT_COMMIT/{{git rev-parse HEAD}}/"
+            -e "s/PLACEHOLDER_BUILD_TIME/{{date}}/"
+        < build_info.gd
+        > src/gen/build_info.gd
+
       - task: butler-task:push
         vars:
           {

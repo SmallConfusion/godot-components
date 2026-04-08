@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3vml4htl1ss7"
-path="res://.godot/imported/logo w text.svg-cb20145358a56c3fae0ba6c86e20314e.ctex"
+uid="uid://bssogsjegc8mi"
+path="res://.godot/imported/FusionSetting.svg-76100d1582c27cbb9ebe9f8c34a716a0.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://splash_screen/logo w text.svg"
-dest_files=["res://.godot/imported/logo w text.svg-cb20145358a56c3fae0ba6c86e20314e.ctex"]
+source_file="res://assets/components/settings/icons/FusionSetting.svg"
+dest_files=["res://.godot/imported/FusionSetting.svg-76100d1582c27cbb9ebe9f8c34a716a0.ctex"]
 
 [params]
 
@@ -23,7 +24,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,13 +32,13 @@ process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
-process/fix_alpha_border=false
-process/premult_alpha=true
+process/fix_alpha_border=true
+process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
 svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=true

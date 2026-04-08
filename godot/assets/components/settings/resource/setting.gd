@@ -9,6 +9,13 @@ extends Resource
 
 @export var description := ""
 
+func _init() -> void:
+	if key_name == "":
+		key_name = display_name.to_snake_case()
+	
+	if display_name == "":
+		display_name = key_name.capitalize()
+
 func get_value() -> Variant:
 	return Settings.config.get_value(section_name, key_name, default_value)
 

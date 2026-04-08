@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RangeSetting" format=3 uid="uid://me5dsxdfuvqq"]
+
+[ext_resource type="Script" uid="uid://bvn8up4ojt8t1" path="res://assets/components/settings/resource/range_setting.gd" id="1_oexxy"]
+
+[sub_resource type="GDScript" id="GDScript_oqbox"]
+script/source = "static func apply_setting(value: Variant) -> void:
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index(&\"Sfx\"), value)
+"
+
+[resource]
+script = ExtResource("1_oexxy")
+display_name = "Master Volume"
+section_name = "audio"
+default_value = 1.0
+apply_setting = SubResource("GDScript_oqbox")
+metadata/_custom_type_script = "uid://bvn8up4ojt8t1"

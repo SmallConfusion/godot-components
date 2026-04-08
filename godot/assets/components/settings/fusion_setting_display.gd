@@ -133,7 +133,7 @@ func _setup_node(option_node: Control) -> void:
 	add_child(box)
 	
 	var label := Label.new()
-	label.text = setting.title
+	label.text = setting.display_name
 	
 	box.add_child(label)
 	

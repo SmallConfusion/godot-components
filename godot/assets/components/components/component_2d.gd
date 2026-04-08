@@ -1,11 +1,10 @@
-@abstract
-class_name Component
-extends Node
+class_name Component2D
+extends Node2D
 
 @export var component_holder: Node
 
-@abstract
-func get_component_name() -> StringName
+func get_component_name() -> StringName:
+	return self.get_script().get_global_name()
 
 func get_component(object: Object) -> Variant:
 	return ComponentHelper.get_component(object, get_component_name())

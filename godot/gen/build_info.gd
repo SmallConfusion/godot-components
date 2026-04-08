@@ -1,0 +1,4 @@
+class_name BuildInfo
+
+const GIT_COMMIT = "PLACEHOLDER_GIT_COMMIT"
+const BUILD_TIME = "PLACEHOLDER_BUILD_TIME"

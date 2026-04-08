@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy8vr1qbrgnf1"]
 
-[ext_resource type="Script" uid="uid://b0fliwjg6b3kf" path="res://keybind_menu/bits/binding_component.gd" id="1_rxk21"]
+[ext_resource type="Script" uid="uid://b0fliwjg6b3kf" path="res://assets/components/keybind_menu/bits/binding_component.gd" id="1_rxk21"]
 
 [node name="BindingComponent" type="HBoxContainer" unique_id=1254194868]
 script = ExtResource("1_rxk21")
@@ -11,7 +11,6 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="." unique_id=320734233]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
 text = "bind"
 
 [node name="Control3" type="Control" parent="." unique_id=1159126432]

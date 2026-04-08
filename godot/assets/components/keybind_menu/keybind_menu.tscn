@@ -1,20 +1,25 @@
 [gd_scene format=3 uid="uid://btgmrydewjylm"]
 
-[ext_resource type="Script" uid="uid://crtu8euj34jn4" path="res://keybind_menu/keybind_menu.gd" id="1_5c24f"]
+[ext_resource type="Script" uid="uid://crtu8euj34jn4" path="res://assets/components/keybind_menu/keybind_menu.gd" id="1_5c24f"]
 
-[node name="ScrollContainer" type="ScrollContainer" unique_id=1006250452]
+[node name="KeybindMenu" type="Control" unique_id=1915819721]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -547.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 2
 script = ExtResource("1_5c24f")
 
 [node name="ActionComponentContainer" type="VBoxContainer" parent="." unique_id=1390620577]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+anchor_right = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
 size_flags_horizontal = 3
+alignment = 1
 
 [node name="ResetButton" type="Button" parent="ActionComponentContainer" unique_id=2124009487]
 layout_mode = 2

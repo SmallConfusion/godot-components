@@ -3,47 +3,47 @@
 version: "3"
 
 tasks:
-  godot-init:*:
+  godot-init:
+    interactive: true
+
     requires:
       vars:
         - GODOT
+        - GAME_NAME
 
     vars:
-      GAME_NAME: "{{index .MATCH 0}}"
       FOLDER_NAME: '{{.GAME_NAME | lower | replace " " "_"}}'
 
     dir: "{{.USER_WORKING_DIR}}"
 
     cmds:
+      - "mkdir {{.FOLDER_NAME}}"
+      - "cd {{.FOLDER_NAME}}"
+
+      - "git clone --depth 1 https://github.com/SmallConfusion/godot-components"
+      - defer: "rm -rf godot-components/"
+
+      - "mkdir -p src/addons/components"
+      - "mv godot-components/godot/* src/addons/components/"
+      - defer: "rm -f src/components/project.godot"
+
+      - "mv godot-components/tasks/ ."
+      - "mv godot-components/gitignore_template .gitignore"
+      - "mv tasks/Taskfile.yaml ."
+
       - |
-        mkdir {{.FOLDER_NAME}}
-        cd {{.FOLDER_NAME}}
-
-        git clone --depth 1 https://github.com/SmallConfusion/godot-components
-
-        mkdir -p src/addons/components
-        mv godot-components/godot/* src/addons/components/
-        mv godot-components/tasks/ .
-        mv godot-components/gitignore_template .gitignore
-        mv tasks/Taskfile.yaml .
-
-        rm -rf godot-components/
-        rm -f src/components/project.godot
-
-        curl https://godotengine.org/assets/press/icon_color.svg -o src/icon.svg
-
-        echo '
+        echo "
         config_version=5
         [application]
         config/name="{{.GAME_NAME}}"
-        ' > src/project.godot
+        > src/project.godot
 
-        echo GODOT="{{.GODOT}}" > .env
-        echo .godot/ > src/.gitignore
+      - 'echo GODOT="{{.GODOT}}" > .env'
+      - "echo .godot/ > src/.gitignore"
 
-        git init
-        git add .
-        git commit -m "Initial commit"
+      - "git init"
+      - "git add ."
+      - 'git commit -m "Initial commit"'
 
       - silent: true
         cmd: |
