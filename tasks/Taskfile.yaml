@@ -44,8 +44,8 @@ tasks:
         vars:
           {
             SRC: "src",
-            TARGET: "web",
-            OUT_DIR: "export/web/",
+            TARGET: "Web",
+            OUT_DIR: "{{.ROOT_DIR}}/export/web",
             OUT_FILE: "index.html",
           }
 

@@ -30,6 +30,8 @@ func set_value(value: Variant) -> void:
 	apply()
 
 func apply() -> void:
+	assert(not Engine.is_editor_hint())
+	
 	if apply_setting == null: return
 	if not apply_setting.has_method("apply_setting"): push_error("Invalid script")
 	print("Setting applied: ", display_name)

@@ -24,4 +24,4 @@ tasks:
 
     cmds:
       - "mkdir -p {{.OUT_DIR}}"
-      - "{{.GODOT}} --headless --path {{.SRC}} --export-release {{.TARGET}} {{.OUT_DIR}}/{{.OUT_FILE}}"
+      - "{{.GODOT}} --headless --path {{.SRC}} --export-release {{.TARGET}}  {{joinPath .OUT_DIR .OUT_FILE}}"
