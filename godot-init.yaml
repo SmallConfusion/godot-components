@@ -29,6 +29,8 @@ tasks:
 
       - 'echo GODOT="{{.GODOT}}" > .env'
 
+      - "{{.GODOT}} -e --path src --headless --quit"
+
       - "git init"
       - "git add ."
       - 'git commit -m "Initial commit"'
