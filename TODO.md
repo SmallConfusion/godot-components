@@ -1,14 +1,6 @@
-- interactive task script
-- build should generate a script with constants for build time and git commit
-- template project with
-  - audio bus
-  - setting menu with
-    - audio
-    - keybinds
-  - menu scene
-  - credits and about with godot license and build info
-  - font
-  - resolution
-  - scaling
-  - texture filter linear mipmap
-  - premultiplied alpha texture preset with mipmaps
+# template project
+- credits and about with godot license and my linktree
+- premultiplied alpha texture preset with mipmaps
+
+# components
+- scene manager
