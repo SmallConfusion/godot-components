@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://eqvcuytu6im7"]
 
 [ext_resource type="Script" uid="uid://d3tj2k47ura8s" path="res://menus/compile_info.gd" id="1_xlg2h"]
+[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://menus/change_scene_component.gd" id="2_jkw7x"]
+[ext_resource type="Script" uid="uid://c1g1slgtq3586" path="res://menus/input_focus_component.gd" id="3_5jbn1"]
 
 [node name="Credits" type="Control" unique_id=474698390]
 layout_mode = 3
@@ -22,3 +24,28 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_xlg2h")
+
+[node name="Button" type="Button" parent="." unique_id=1310160748]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -36.0
+offset_right = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Menu"
+
+[node name="ChangeSceneComponent" type="Node" parent="Button" unique_id=233061431]
+script = ExtResource("2_jkw7x")
+scene = "uid://bgl3gq2uxeqd7"
+metadata/_custom_type_script = "uid://die04swyd24gj"
+
+[node name="InputFocusComponent" type="Node" parent="Button" unique_id=1249494174]
+script = ExtResource("3_5jbn1")
+metadata/_custom_type_script = "uid://c1g1slgtq3586"

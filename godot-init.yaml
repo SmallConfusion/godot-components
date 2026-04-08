@@ -4,8 +4,6 @@ version: "3"
 
 tasks:
   godot-init:
-    interactive: true
-
     requires:
       vars:
         - GODOT
@@ -14,32 +12,22 @@ tasks:
     vars:
       FOLDER_NAME: '{{.GAME_NAME | lower | replace " " "_"}}'
 
-    dir: "{{.USER_WORKING_DIR}}"
+    dir: "{{.USER_WORKING_DIR}}/{{.FOLDER_NAME}}"
 
     cmds:
-      - "mkdir {{.FOLDER_NAME}}"
-      - "cd {{.FOLDER_NAME}}"
-
       - "git clone --depth 1 https://github.com/SmallConfusion/godot-components"
       - defer: "rm -rf godot-components/"
 
-      - "mkdir -p src/addons/components"
-      - "mv godot-components/godot/* src/addons/components/"
-      - defer: "rm -f src/components/project.godot"
+      - "mkdir src"
+      - "mv godot-components/godot/* src"
+
+      - 'sed -i src/project.godot -e "s/PLACEHOLDER_NAME/{{.GAME_NAME}}/"'
 
       - "mv godot-components/tasks/ ."
       - "mv godot-components/gitignore_template .gitignore"
       - "mv tasks/Taskfile.yaml ."
 
-      - |
-        echo "
-        config_version=5
-        [application]
-        config/name="{{.GAME_NAME}}"
-        > src/project.godot
-
       - 'echo GODOT="{{.GODOT}}" > .env'
-      - "echo .godot/ > src/.gitignore"
 
       - "git init"
       - "git add ."

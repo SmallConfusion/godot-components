@@ -26,7 +26,7 @@ tasks:
         - GODOT
 
     cmds:
-      - "{{.GODOT}} -e --path src/"
+      - "{{.GODOT}} -e --path src/ &"
 
   clean:
     cmds:

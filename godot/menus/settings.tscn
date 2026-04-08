@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://ddp03ysx0x6wk" path="res://theme/default_theme.tres" id="5_cyvjr"]
 [ext_resource type="PackedScene" uid="uid://btgmrydewjylm" path="res://assets/components/keybind_menu/keybind_menu.tscn" id="5_d8eyj"]
 [ext_resource type="Script" uid="uid://die04swyd24gj" path="res://menus/change_scene_component.gd" id="7_8754g"]
+[ext_resource type="Script" uid="uid://c1g1slgtq3586" path="res://menus/input_focus_component.gd" id="8_ac0sr"]
 
 [node name="Settings" type="Control" unique_id=1875226421]
 layout_mode = 3
@@ -71,9 +72,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-text = "Return"
+text = "Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChangeSceneComponent" type="Node" parent="." unique_id=820499285]
+[node name="ChangeSceneComponent" type="Node" parent="HBoxContainer/Button" unique_id=820499285]
 script = ExtResource("7_8754g")
+scene = "uid://bgl3gq2uxeqd7"
 metadata/_custom_type_script = "uid://die04swyd24gj"
+
+[node name="InputFocusComponent" type="Node" parent="HBoxContainer/Button" unique_id=93975768]
+script = ExtResource("8_ac0sr")
+metadata/_custom_type_script = "uid://c1g1slgtq3586"
