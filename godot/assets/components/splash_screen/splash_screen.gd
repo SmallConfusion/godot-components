@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 @export var skip_in_editor := true
 @export var animation := &"splash"

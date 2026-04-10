@@ -2,32 +2,35 @@
 
 [ext_resource type="Texture2D" uid="uid://c3vml4htl1ss7" path="res://assets/components/splash_screen/logo w text.svg" id="1_11ivb"]
 [ext_resource type="Script" uid="uid://bpcanbbmqv1of" path="res://assets/components/splash_screen/splash_screen.gd" id="1_l1q4m"]
+[ext_resource type="Script" uid="uid://bmiltv1o0uh2k" path="res://scaled_camera.gd" id="3_v1cem"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5xwob"]
 
 [sub_resource type="Animation" id="Animation_l1q4m"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/path = NodePath("../../Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:position")
+tracks/1/path = NodePath("../../Sprite2D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(750, 827)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_7ckco"]
@@ -36,26 +39,26 @@ length = 4.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/path = NodePath("../../Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 2, 3, 4.006502),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0.5, 1.5, 3.0000002, 4),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(0, 355), Vector2(0, 0), Vector2(0, 0), Vector2(0, 355)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:position")
-tracks/1/interp = 2
+tracks/1/path = NodePath("../../Sprite2D:modulate")
+tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.5, 1.5, 3.0000002, 4),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(750, 1100), Vector2(750, 826.99945)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_85y3b"]
@@ -64,18 +67,23 @@ _data = {
 &"splash": SubResource("Animation_7ckco")
 }
 
-[node name="SplashScreen" type="Control" unique_id=1481064502]
+[node name="Node2D" type="Node2D" unique_id=74681821]
+script = ExtResource("1_l1q4m")
+skip_in_editor = false
+next = "uid://bgl3gq2uxeqd7"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=927488687]
+layer = -10
+
+[node name="SplashScreen" type="Control" parent="CanvasLayer" unique_id=1481064502]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_l1q4m")
-skip_in_editor = false
-next = "uid://bnyqndigqecn2"
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=49743966]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SplashScreen" unique_id=49743966]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,20 +92,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.10747976, 0.10747973, 0.10747973, 1)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1371402030]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1170.0
-offset_top = -253.0
-offset_right = 1170.0
-offset_bottom = 253.00024
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=139298966]
+material = SubResource("CanvasItemMaterial_5xwob")
 texture = ExtResource("1_11ivb")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1316297645]
+script = ExtResource("3_v1cem")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187681902]
+root_node = NodePath("../CanvasLayer/SplashScreen")
 libraries/ = SubResource("AnimationLibrary_85y3b")

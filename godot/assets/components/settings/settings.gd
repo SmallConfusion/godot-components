@@ -26,7 +26,7 @@ func _init_settings(path: String) -> void:
 		
 		var setting := load(path.path_join(file))
 		
-		if setting is Setting:
+		if setting is Setting and not Engine.is_editor_hint():
 			setting.apply()
 	
 	var directories := DirAccess.get_directories_at(path)
