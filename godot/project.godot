@@ -31,12 +31,12 @@ window/size/viewport_height=2160
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-window/stretch/scale=3.02
 
 [gui]
 
 theme/default_font_hinting=2
 theme/default_font_subpixel_positioning=3
+theme/default_theme_scale=3.0
 theme/custom="uid://ddp03ysx0x6wk"
 theme/custom_font="uid://cq2qyl07qhx4a"
 
