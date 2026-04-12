@@ -68,7 +68,6 @@ _data = {
 
 [node name="Node2D" type="Node2D" unique_id=74681821]
 script = ExtResource("1_l1q4m")
-skip_in_editor = false
 next = "uid://bgl3gq2uxeqd7"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=927488687]

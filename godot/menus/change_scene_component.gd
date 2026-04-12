@@ -6,6 +6,6 @@ extends Component
 func _ready() -> void:
 	super._ready()
 	
-	var change_scene := get_tree().change_scene_to_file.bind(scene)
+	var change_scene: Callable = SceneManager.change_scene.bind(scene)
 	var button: Button = self.component_holder
 	button.pressed.connect(change_scene)

@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://rqp3e7mmkgwr"
 Settings="*uid://crho604ktqtrd"
 InputMapManager="*uid://clertc6jl4i02"
 TextureEnforcer="*uid://dp3a554oitps0"
+SceneManager="*uid://begqgrw46dsm7"
 
 [display]
 
