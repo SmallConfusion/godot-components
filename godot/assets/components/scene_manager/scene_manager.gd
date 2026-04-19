@@ -4,7 +4,6 @@ extends CanvasLayer
 
 signal finished
 
-@export var transition_set: ScreenTransitionSet = preload("uid://2grwx77qo4l4")
 @onready var texture_rect: TextureRect = $TextureRect
 
 var tween: Tween
@@ -12,7 +11,7 @@ var tween: Tween
 func _ready() -> void:
 	visible = false
 
-func change_scene(scene: String) -> void:
+func change_scene(scene: String, transition_set: ScreenTransitionSet = preload("uid://2grwx77qo4l4")) -> void:
 	ResourceLoader.load_threaded_request(scene)
 	visible = true
 	

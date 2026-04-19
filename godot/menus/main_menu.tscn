@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://die04swyd24gj" path="res://menus/change_scene_component.gd" id="1_8gy84"]
 [ext_resource type="Script" uid="uid://c1g1slgtq3586" path="res://menus/input_focus_component.gd" id="2_ij7vn"]
+[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://assets/components/scene_manager/circle_transition.tres" id="2_rqbgu"]
 [ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://menus/quit_button.gd" id="3_yjgyn"]
 
 [node name="MainMenu" type="Control" unique_id=222960184]
@@ -32,6 +33,7 @@ text = "Play"
 
 [node name="ChangeSceneComponent" type="Node" parent="VBoxContainer/Play" unique_id=1231476025]
 script = ExtResource("1_8gy84")
+transition = ExtResource("2_rqbgu")
 metadata/_custom_type_script = "uid://die04swyd24gj"
 
 [node name="InputFocusComponent" type="Node" parent="VBoxContainer/Play" unique_id=2078515314]

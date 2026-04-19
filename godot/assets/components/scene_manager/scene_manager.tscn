@@ -1,26 +1,10 @@
 [gd_scene format=3 uid="uid://begqgrw46dsm7"]
 
 [ext_resource type="Script" uid="uid://bfvrrrjo8sj3n" path="res://assets/components/scene_manager/scene_manager.gd" id="1_jfh72"]
-[ext_resource type="Script" uid="uid://1ajt73h78qxt" path="res://assets/components/scene_manager/screen_transition.gd" id="2_5855k"]
 [ext_resource type="Texture2D" uid="uid://dvy2ttp28pgtf" path="res://icon.svg" id="2_cgd8i"]
 [ext_resource type="Shader" uid="uid://ddao7l5r8h4ut" path="res://assets/components/scene_manager/transition_shader.gdshader" id="2_njgca"]
+[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://assets/components/scene_manager/circle_transition.tres" id="2_r8bws"]
 [ext_resource type="Texture2D" uid="uid://nl0cnqq6ww5a" path="res://assets/components/scene_manager/trans1.exr" id="3_cgd8i"]
-[ext_resource type="Script" uid="uid://da1ab2niag61d" path="res://assets/components/scene_manager/sceen_transition_set.gd" id="4_rcyvb"]
-
-[sub_resource type="Resource" id="Resource_scdbt"]
-script = ExtResource("2_5855k")
-invert = true
-metadata/_custom_type_script = "uid://1ajt73h78qxt"
-
-[sub_resource type="Resource" id="Resource_rcyvb"]
-script = ExtResource("2_5855k")
-metadata/_custom_type_script = "uid://1ajt73h78qxt"
-
-[sub_resource type="Resource" id="Resource_1xhc7"]
-script = ExtResource("4_rcyvb")
-forwards = SubResource("Resource_rcyvb")
-backwards = SubResource("Resource_scdbt")
-metadata/_custom_type_script = "uid://da1ab2niag61d"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r8bws"]
 shader = ExtResource("2_njgca")
@@ -32,8 +16,9 @@ shader_parameter/invert = false
 [node name="SceneManager" type="CanvasLayer" unique_id=1798159334]
 process_mode = 3
 layer = 99999
+visible = false
 script = ExtResource("1_jfh72")
-transition_set = SubResource("Resource_1xhc7")
+transition_set = ExtResource("2_r8bws")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=692988538]
 texture_filter = 1
