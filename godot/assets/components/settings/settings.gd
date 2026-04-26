@@ -17,9 +17,9 @@ func save() -> void:
 	config.save(FILEPATH)
 
 func _init_settings(path: String) -> void:
-    if Engine.is_editor_hint(): return
+	if Engine.is_editor_hint(): return
 
-    var files := DirAccess.get_files_at(path)
+	var files := DirAccess.get_files_at(path)
 	
 	for file in files:
 		if file.ends_with(".uid"): continue
