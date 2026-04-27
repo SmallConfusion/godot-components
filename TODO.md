@@ -1,8 +1,2 @@
 - credits and about with godot license and my linktree
-- Refactor Components
-  - const NAME instead of get_component_name() to support multiple classes of component under the same name
-  - Support removal of components
-  - Remove get_component() from Component, it's useless without being static.
-  - Remove checked function from ComponentHelper
-  - Give ComponentHelper a better name since the user will have to use it to get components.
-- Make ui_components folder
+- open meta in browser component
