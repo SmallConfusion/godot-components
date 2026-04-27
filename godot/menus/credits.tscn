@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="2_5jbn1"]
 [ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="2_jkw7x"]
+[ext_resource type="Script" uid="uid://djjyhf3m5sukp" path="res://assets/components/ui_components/open_link.gd" id="3_5jbn1"]
 
 [node name="Credits" type="Control" unique_id=474698390]
 layout_mode = 3
@@ -10,18 +11,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="CompileInfo" type="Label" parent="." unique_id=565688015]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -23.0
-grow_horizontal = 0
-grow_vertical = 0
 
 [node name="Button" type="Button" parent="." unique_id=1310160748]
 layout_mode = 1
@@ -60,5 +49,13 @@ offset_bottom = -184.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
-text = "Godot Engine
-MIT License"
+text = "Game by SmallConfusion
+[url]https://linktr.ee/smallconfusion[/url]
+
+Godot Engine
+MIT License
+[url]https://godotengine.org/license/[/url]"
+
+[node name="OpenLink" type="Node" parent="RichTextLabel" unique_id=1273794339]
+script = ExtResource("3_5jbn1")
+metadata/_custom_type_script = "uid://djjyhf3m5sukp"

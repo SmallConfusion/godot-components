@@ -1,2 +1,1 @@
-- credits and about with godot license and my linktree
-- open meta in browser component
+- Resolution scaling
