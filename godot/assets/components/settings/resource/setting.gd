@@ -24,7 +24,7 @@ func get_value() -> Variant:
 func set_value(value: Variant) -> void:
 	assert(not Engine.is_editor_hint())
 	
-	print("Setting set: ", display_name, value)
+	print("Setting set: %s %s" % [display_name, value])
 	Settings.config.set_value(section_name, key_name, value)
 	Settings.save()
 	apply()
@@ -34,5 +34,5 @@ func apply() -> void:
 	
 	if apply_setting == null: return
 	if not apply_setting.has_method("apply_setting"): push_error("Invalid script")
-	print("Setting applied: ", display_name)
+	print("Setting applied: %s" % [display_name])
 	apply_setting.apply_setting(get_value())

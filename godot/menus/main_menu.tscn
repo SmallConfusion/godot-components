@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bgl3gq2uxeqd7"]
 
-[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://menus/change_scene_component.gd" id="1_8gy84"]
-[ext_resource type="Script" uid="uid://c1g1slgtq3586" path="res://menus/input_focus_component.gd" id="2_ij7vn"]
-[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://assets/components/scene_manager/circle_transition.tres" id="2_rqbgu"]
-[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://menus/quit_button.gd" id="3_yjgyn"]
+[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="1_8gy84"]
+[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="1_rqbgu"]
+[ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://assets/components/ui_components/hide_on_feature.gd" id="2_ij7vn"]
+[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://assets/components/ui_components/quit_button.gd" id="3_yjgyn"]
 
 [node name="MainMenu" type="Control" unique_id=222960184]
 layout_mode = 3
@@ -31,20 +31,15 @@ grow_vertical = 2
 layout_mode = 2
 text = "Play"
 
-[node name="ChangeSceneComponent" type="Node" parent="VBoxContainer/Play" unique_id=1231476025]
-script = ExtResource("1_8gy84")
-transition = ExtResource("2_rqbgu")
-metadata/_custom_type_script = "uid://die04swyd24gj"
-
-[node name="InputFocusComponent" type="Node" parent="VBoxContainer/Play" unique_id=2078515314]
-script = ExtResource("2_ij7vn")
-metadata/_custom_type_script = "uid://c1g1slgtq3586"
+[node name="GrabFocus" type="Node" parent="VBoxContainer/Play" unique_id=206293085]
+script = ExtResource("1_rqbgu")
+metadata/_custom_type_script = "uid://b4xtkvhb57h0p"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=2038054733]
 layout_mode = 2
 text = "Settings"
 
-[node name="ChangeSceneComponent" type="Node" parent="VBoxContainer/Settings" unique_id=2130687083]
+[node name="ChangeScene" type="Node" parent="VBoxContainer/Settings" unique_id=2130687083]
 script = ExtResource("1_8gy84")
 scene = "uid://86xus34xq57h"
 metadata/_custom_type_script = "uid://die04swyd24gj"
@@ -53,7 +48,7 @@ metadata/_custom_type_script = "uid://die04swyd24gj"
 layout_mode = 2
 text = "Credits"
 
-[node name="ChangeSceneComponent" type="Node" parent="VBoxContainer/Credits" unique_id=2009786843]
+[node name="ChangeScene" type="Node" parent="VBoxContainer/Credits" unique_id=2009786843]
 script = ExtResource("1_8gy84")
 scene = "uid://eqvcuytu6im7"
 metadata/_custom_type_script = "uid://die04swyd24gj"
@@ -61,4 +56,11 @@ metadata/_custom_type_script = "uid://die04swyd24gj"
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=418701678]
 layout_mode = 2
 text = "Quit"
+
+[node name="HideOnFeature" type="Node" parent="VBoxContainer/Quit" unique_id=1984192843]
+script = ExtResource("2_ij7vn")
+metadata/_custom_type_script = "uid://dibmctknwmrub"
+
+[node name="QuitButton" type="Node" parent="VBoxContainer/Quit" unique_id=948766922]
 script = ExtResource("3_yjgyn")
+metadata/_custom_type_script = "uid://31ooru6bycsw"

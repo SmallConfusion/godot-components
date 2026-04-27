@@ -9,7 +9,7 @@ script/source = "static func apply_setting(value: Variant) -> void:
 
 [resource]
 script = ExtResource("1_oexxy")
-display_name = "Master Volume"
+display_name = "SFX Volume"
 section_name = "audio"
 default_value = 1.0
 apply_setting = SubResource("GDScript_oqbox")

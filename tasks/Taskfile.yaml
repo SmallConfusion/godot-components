@@ -39,20 +39,7 @@ tasks:
     sources:
       - src/**/*
 
-    vars:
-      GIT_COMMIT:
-        sh: "git rev-parse HEAD"
-
     cmds:
-      - "cp src/gen/build_info.gd ."
-
-      - defer: "mv build_info.gd src/gen/build_info.gd"
-
-      - |
-        sed -i src/gen/build_info.gd \
-            -e 's/PLACEHOLDER_GIT_COMMIT/{{.GIT_COMMIT}}/' \
-            -e 's/PLACEHOLDER_BUILD_TIME/{{now | date "2006-01-02 15:04:05 MST"}}/'
-
       - task: godot-export:export
         vars:
           {

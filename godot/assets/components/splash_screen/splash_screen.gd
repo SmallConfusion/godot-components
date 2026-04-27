@@ -17,4 +17,4 @@ func _ready() -> void:
 		await animation_player.animation_finished
 	
 	var next_scene := ResourceLoader.load_threaded_get(next)
-	get_tree().change_scene_to_packed(next_scene)
+	get_tree().change_scene_to_packed.call_deferred(next_scene)

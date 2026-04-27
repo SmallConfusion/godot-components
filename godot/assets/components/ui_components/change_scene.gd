@@ -1,4 +1,4 @@
-class_name ChangeSceneComponent
+class_name ChangeScene
 extends Component
 
 @export_file("*.tscn", "*.scn") var scene: String
@@ -6,7 +6,6 @@ extends Component
 
 func _ready() -> void:
 	super._ready()
-	
 	var change_scene: Callable = SceneManager.change_scene.bind(scene, transition)
 	var button: Button = self.component_holder
 	button.pressed.connect(change_scene)
