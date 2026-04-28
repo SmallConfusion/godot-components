@@ -1,6 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://ddp03ysx0x6wk"]
 
+[ext_resource type="FontFile" uid="uid://cq2qyl07qhx4a" path="res://theme/BitterPro-Regular.ttf" id="1_ag65a"]
+
 [resource]
+default_font = ExtResource("1_ag65a")
 SettingMarginContainer/base_type = &"MarginContainer"
 SettingMarginContainer/constants/margin_bottom = 16
 SettingMarginContainer/constants/margin_left = 16

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RangeSetting" format=3 uid="uid://cvmw4mjb1sc5f"]
+
+[ext_resource type="Script" uid="uid://bvn8up4ojt8t1" path="res://assets/components/settings/resource/range_setting.gd" id="1_fnuid"]
+
+[sub_resource type="GDScript" id="GDScript_fnuid"]
+script/source = "static func apply_setting(value: Variant) -> void:
+	assert(value is int or value is float)
+	
+	if (!OS.has_feature(\"editor\")):
+		ProjectSettings.set_setting(\"gui/theme/default_theme_scale\", value)
+		ProjectSettings.save()
+"
+
+[resource]
+script = ExtResource("1_fnuid")
+minimum = 0.5
+maximum = 4.0
+step = 0.1
+apply_every_step = false
+display_name = "Display Scale"
+section_name = "display"
+default_value = 1.0
+apply_setting = SubResource("GDScript_fnuid")
+description = "The scale of the UI (requires game restart)"
+metadata/_custom_type_script = "uid://bvn8up4ojt8t1"

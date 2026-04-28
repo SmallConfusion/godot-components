@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://drbajdij3obg3"]
+
+[ext_resource type="Script" uid="uid://c7wyruovhkuqw" path="res://assets/components/scaled_camera.gd" id="1_sasra"]
+[ext_resource type="Texture2D" uid="uid://dvy2ttp28pgtf" path="res://icon.svg" id="1_uhqqe"]
+[ext_resource type="Material" uid="uid://bpv5vjk32086k" path="res://assets/components/texture_enforcer/premultiplied_alpha.tres" id="2_coq8p"]
+
+[node name="Node2D" type="Node2D" unique_id=2101832395]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1756944796]
+script = ExtResource("1_sasra")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=374444568]
+material = ExtResource("2_coq8p")
+position = Vector2(187, 162)
+texture = ExtResource("1_uhqqe")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=829642883]
+material = ExtResource("2_coq8p")
+position = Vector2(-1818, -1016)
+texture = ExtResource("1_uhqqe")

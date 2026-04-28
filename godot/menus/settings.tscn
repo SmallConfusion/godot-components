@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://cg3dwil6gki2" path="res://settings/master_volume.tres" id="2_d8eyj"]
 [ext_resource type="Resource" uid="uid://c03j67sh7tnp8" path="res://settings/music_volume.tres" id="3_cyvjr"]
 [ext_resource type="Resource" uid="uid://me5dsxdfuvqq" path="res://settings/sfx_volume.tres" id="4_8754g"]
+[ext_resource type="Resource" uid="uid://cvmw4mjb1sc5f" path="res://settings/display_scale.tres" id="5_20nqt"]
 [ext_resource type="Theme" uid="uid://ddp03ysx0x6wk" path="res://theme/default_theme.tres" id="5_cyvjr"]
 [ext_resource type="PackedScene" uid="uid://btgmrydewjylm" path="res://assets/components/keybind_menu/keybind_menu.tscn" id="5_d8eyj"]
 [ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="7_8754g"]
@@ -26,9 +27,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TabContainer" type="TabContainer" parent="HBoxContainer" unique_id=1430547503]
-custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 3
 current_tab = 0
 metadata/_edit_use_anchors_ = true
 
@@ -58,12 +58,27 @@ script = ExtResource("1_hjugb")
 setting = ExtResource("4_8754g")
 metadata/_custom_type_script = "uid://drfctqgoe5um1"
 
+[node name="Display" type="MarginContainer" parent="HBoxContainer/TabContainer" unique_id=1929977307]
+visible = false
+layout_mode = 2
+theme_type_variation = &"SettingMarginContainer"
+metadata/_tab_index = 1
+
+[node name="Display" type="VBoxContainer" parent="HBoxContainer/TabContainer/Display" unique_id=1978221170]
+layout_mode = 2
+
+[node name="FusionSettingDisplay" type="HBoxContainer" parent="HBoxContainer/TabContainer/Display/Display" unique_id=2082554649]
+layout_mode = 2
+script = ExtResource("1_hjugb")
+setting = ExtResource("5_20nqt")
+metadata/_custom_type_script = "uid://drfctqgoe5um1"
+
 [node name="Keybinds" type="MarginContainer" parent="HBoxContainer/TabContainer" unique_id=2047111444]
 visible = false
 layout_mode = 2
 theme = ExtResource("5_cyvjr")
 theme_type_variation = &"SettingMarginContainer"
-metadata/_tab_index = 1
+metadata/_tab_index = 2
 
 [node name="Keybinds" parent="HBoxContainer/TabContainer/Keybinds" unique_id=1006250452 instance=ExtResource("5_d8eyj")]
 layout_mode = 2
