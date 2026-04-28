@@ -1,0 +1,2 @@
+- Make display scale use gui scale with notification that the game must restart
+- 
