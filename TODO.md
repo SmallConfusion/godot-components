@@ -1,1 +1,3 @@
-- Make display scale use gui scale with notification that the game must restart
+- Make display scale use gui scale
+- Setting display show slider value
+- Settings menu show "game must restart message"
