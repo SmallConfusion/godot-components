@@ -1,0 +1,3 @@
+- Scrap resolution scaling
+- Use msdf fonts
+- Disable gui pixel snapping
