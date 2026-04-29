@@ -1,3 +1,2 @@
 - Make pause menu
-- Give scene manager a stack to allow returning to the previous scene
-- Use scene manager stack for settings and credits from main menu
+- Make transitions work in back button in scene manager
