@@ -28,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TabContainer" type="TabContainer" parent="HBoxContainer" unique_id=1430547503]
-custom_maximum_size = Vector2(1200, -1)
+custom_minimum_size = Vector2(720, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 current_tab = 0
@@ -46,7 +46,6 @@ layout_mode = 2
 layout_mode = 2
 script = ExtResource("1_hjugb")
 setting = ExtResource("2_d8eyj")
-require_game_restart = null
 value_display = "%.2f"
 metadata/_custom_type_script = "uid://drfctqgoe5um1"
 
@@ -54,7 +53,6 @@ metadata/_custom_type_script = "uid://drfctqgoe5um1"
 layout_mode = 2
 script = ExtResource("1_hjugb")
 setting = ExtResource("3_cyvjr")
-require_game_restart = null
 value_display = "%.2f"
 metadata/_custom_type_script = "uid://drfctqgoe5um1"
 
@@ -62,7 +60,6 @@ metadata/_custom_type_script = "uid://drfctqgoe5um1"
 layout_mode = 2
 script = ExtResource("1_hjugb")
 setting = ExtResource("4_8754g")
-require_game_restart = null
 value_display = "%.2f"
 metadata/_custom_type_script = "uid://drfctqgoe5um1"
 

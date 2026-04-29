@@ -15,15 +15,17 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=886010568]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.4622396
-anchor_top = 0.35039684
-anchor_right = 0.53776044
-anchor_bottom = 0.6496032
-offset_bottom = -0.00012207031
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -370.0
+offset_top = -465.0
+offset_right = 370.0
+offset_bottom = 465.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=2103782458]
 layout_mode = 2

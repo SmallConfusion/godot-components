@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://c3vml4htl1ss7" path="res://assets/components/splash_screen/logo w text.svg" id="1_11ivb"]
 [ext_resource type="Script" uid="uid://bpcanbbmqv1of" path="res://assets/components/splash_screen/splash_screen.gd" id="1_l1q4m"]
-[ext_resource type="Script" uid="uid://c7wyruovhkuqw" path="res://assets/components/scaled_camera.gd" id="3_v1cem"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5xwob"]
 
@@ -94,10 +93,10 @@ color = Color(0.10747976, 0.10747973, 0.10747973, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=139298966]
 material = SubResource("CanvasItemMaterial_5xwob")
+scale = Vector2(0.93280625, 0.9328063)
 texture = ExtResource("1_11ivb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1316297645]
-script = ExtResource("3_v1cem")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187681902]
 root_node = NodePath("../CanvasLayer/SplashScreen")
