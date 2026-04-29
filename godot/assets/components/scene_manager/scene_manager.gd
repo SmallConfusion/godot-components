@@ -8,8 +8,21 @@ signal finished
 
 var tween: Tween
 
+var scene_stack: Array[Node] = []
+
 func _ready() -> void:
 	visible = false
+
+func clear_stack() -> void:
+	scene_stack = []
+
+func back() -> void:
+	if len(scene_stack) == 0:
+		push_warning("Can't go back when there is no previous scene")
+		return
+	
+	var scene: Node = scene_stack.pop_back()
+	get_tree().change_scene_to_node(scene)
 
 func change_scene(scene: String, transition_set: ScreenTransitionSet = preload("uid://2grwx77qo4l4")) -> void:
 	ResourceLoader.load_threaded_request(scene)
@@ -27,6 +40,10 @@ func change_scene(scene: String, transition_set: ScreenTransitionSet = preload("
 			set_shader_t, 0.0, 1.0, transition_set.forwards.transition_length
 		)
 		await tween.finished
+	
+	var old_scene := get_tree().current_scene
+	get_tree().root.remove_child(old_scene)
+	scene_stack.push_back(old_scene)
 	
 	get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(scene))
 	

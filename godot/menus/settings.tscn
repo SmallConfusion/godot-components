@@ -7,8 +7,8 @@
 [ext_resource type="Resource" uid="uid://cvmw4mjb1sc5f" path="res://settings/display_scale.tres" id="5_20nqt"]
 [ext_resource type="Theme" uid="uid://ddp03ysx0x6wk" path="res://theme/default_theme.tres" id="5_cyvjr"]
 [ext_resource type="PackedScene" uid="uid://btgmrydewjylm" path="res://assets/components/keybind_menu/keybind_menu.tscn" id="5_d8eyj"]
-[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="7_8754g"]
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="8_ac0sr"]
+[ext_resource type="Script" uid="uid://csuc1e3bcvrof" path="res://assets/components/ui_components/back_button.gd" id="9_mf5y3"]
 [ext_resource type="Script" uid="uid://b3pha7al6lxbx" path="res://assets/components/ui_components/restart_game_label.gd" id="10_mf5y3"]
 
 [node name="Settings" type="Control" unique_id=1875226421]
@@ -103,14 +103,13 @@ size_flags_vertical = 4
 text = "Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChangeScene" type="Node" parent="HBoxContainer/VBoxContainer/Button" unique_id=820499285]
-script = ExtResource("7_8754g")
-scene = "uid://bgl3gq2uxeqd7"
-metadata/_custom_type_script = "uid://die04swyd24gj"
-
 [node name="GrabFocus" type="Node" parent="HBoxContainer/VBoxContainer/Button" unique_id=1738049050]
 script = ExtResource("8_ac0sr")
 metadata/_custom_type_script = "uid://b4xtkvhb57h0p"
+
+[node name="BackButton" type="Node" parent="HBoxContainer/VBoxContainer/Button" unique_id=371317810]
+script = ExtResource("9_mf5y3")
+metadata/_custom_type_script = "uid://csuc1e3bcvrof"
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1292562530]
 layout_mode = 2

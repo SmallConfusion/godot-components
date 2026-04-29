@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://eqvcuytu6im7"]
 
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="2_5jbn1"]
-[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="2_jkw7x"]
+[ext_resource type="Script" uid="uid://csuc1e3bcvrof" path="res://assets/components/ui_components/back_button.gd" id="2_gknjt"]
 [ext_resource type="Script" uid="uid://djjyhf3m5sukp" path="res://assets/components/ui_components/open_link.gd" id="3_5jbn1"]
 
 [node name="Credits" type="Control" unique_id=474698390]
@@ -27,14 +27,13 @@ size_flags_vertical = 4
 text = "Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChangeScene" type="Node" parent="Button" unique_id=233061431]
-script = ExtResource("2_jkw7x")
-scene = "uid://bgl3gq2uxeqd7"
-metadata/_custom_type_script = "uid://die04swyd24gj"
-
 [node name="GrabFocus" type="Node" parent="Button" unique_id=646542286]
 script = ExtResource("2_5jbn1")
 metadata/_custom_type_script = "uid://b4xtkvhb57h0p"
+
+[node name="BackButton" type="Node" parent="Button" unique_id=298016166]
+script = ExtResource("2_gknjt")
+metadata/_custom_type_script = "uid://csuc1e3bcvrof"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2045541156]
 layout_mode = 1
