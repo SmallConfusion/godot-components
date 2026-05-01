@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://me5dsxdfuvqq" path="res://settings/sfx_volume.tres" id="4_8754g"]
 [ext_resource type="Theme" uid="uid://ddp03ysx0x6wk" path="res://theme/default_theme.tres" id="5_cyvjr"]
 [ext_resource type="PackedScene" uid="uid://btgmrydewjylm" path="res://assets/components/keybind_menu/keybind_menu.tscn" id="5_d8eyj"]
+[ext_resource type="Resource" uid="uid://bdjwv86tlptua" path="res://settings/vsync.tres" id="5_mf5y3"]
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="8_ac0sr"]
 [ext_resource type="Script" uid="uid://csuc1e3bcvrof" path="res://assets/components/ui_components/back_button.gd" id="9_mf5y3"]
 [ext_resource type="Script" uid="uid://b3pha7al6lxbx" path="res://assets/components/ui_components/restart_game_label.gd" id="10_mf5y3"]
@@ -62,12 +63,27 @@ setting = ExtResource("4_8754g")
 value_display = "%.2f"
 metadata/_custom_type_script = "uid://drfctqgoe5um1"
 
+[node name="Display" type="MarginContainer" parent="HBoxContainer/TabContainer" unique_id=286628482]
+visible = false
+layout_mode = 2
+theme_type_variation = &"SettingMarginContainer"
+metadata/_tab_index = 1
+
+[node name="Audio" type="VBoxContainer" parent="HBoxContainer/TabContainer/Display" unique_id=1779985605]
+layout_mode = 2
+
+[node name="FusionSettingDisplay" type="HBoxContainer" parent="HBoxContainer/TabContainer/Display/Audio" unique_id=1775203212]
+layout_mode = 2
+script = ExtResource("1_hjugb")
+setting = ExtResource("5_mf5y3")
+metadata/_custom_type_script = "uid://drfctqgoe5um1"
+
 [node name="Keybinds" type="MarginContainer" parent="HBoxContainer/TabContainer" unique_id=2047111444]
 visible = false
 layout_mode = 2
 theme = ExtResource("5_cyvjr")
 theme_type_variation = &"SettingMarginContainer"
-metadata/_tab_index = 1
+metadata/_tab_index = 2
 
 [node name="Keybinds" parent="HBoxContainer/TabContainer/Keybinds" unique_id=1006250452 instance=ExtResource("5_d8eyj")]
 layout_mode = 2

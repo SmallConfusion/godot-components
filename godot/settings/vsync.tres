@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Setting" format=3 uid="uid://bdjwv86tlptua"]
+
+[ext_resource type="Script" uid="uid://cgytots60rj01" path="res://assets/components/settings/resource/setting.gd" id="1_gr8vv"]
+
+[sub_resource type="GDScript" id="GDScript_gr8vv"]
+script/source = "static func apply_setting(value: bool) -> void:
+	if value:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+	else:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+"
+
+[resource]
+script = ExtResource("1_gr8vv")
+display_name = "V-Sync"
+key_name = "v_sync"
+section_name = "display"
+default_value = true
+apply_setting = SubResource("GDScript_gr8vv")
+metadata/_custom_type_script = "uid://cgytots60rj01"
