@@ -9,7 +9,7 @@ func _init(p_count: int, p_value: Variant = 0) -> void:
 	count = p_count
 	value = p_value
 
-func forever(value: Variant = 0) -> RepeatIterator:
+static func forever(value: Variant = 0) -> RepeatIterator:
 	return RepeatIterator.new(INT64_MAX, value)
 
 func _next_one() -> Variant:

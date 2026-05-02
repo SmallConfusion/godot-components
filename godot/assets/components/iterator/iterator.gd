@@ -82,3 +82,10 @@ func enumerate() -> ParallelIterator:
 
 func chain(other: Iterator) -> ChainIterator:
 	return ChainIterator.new(self, other)
+
+func for_each(f: Callable) -> void:
+	var n: Variant = next()
+	
+	while n != null:
+		f.call(n)
+		n = next()

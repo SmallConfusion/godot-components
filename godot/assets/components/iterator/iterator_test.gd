@@ -93,6 +93,21 @@ func _run() -> void:
 	assert_eq(enumerate.next(), [4, 0])
 	assert_eq(enumerate.next(), null)
 	
+	var count := [0]
+	RepeatIterator.new(10, 100).for_each(func(value):
+		assert_eq(value, 100)
+		count[0] += 1
+	)
+	assert_eq(count, [10])
+	
+	var chain := RepeatIterator.new(2, 1).chain(RangeIterator.to(3))
+	assert_eq(chain.next(), 1)
+	assert_eq(chain.next(), 1)
+	assert_eq(chain.next(), 0)
+	assert_eq(chain.next(), 1)
+	assert_eq(chain.next(), 2)
+	assert_eq(chain.next(), null)
+	
 	print("Done running tests")
 
 static func assert_eq(a: Variant, b: Variant) -> void:
