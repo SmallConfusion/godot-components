@@ -79,3 +79,6 @@ func cartesian_product(other: Iterator) -> CartesianIterator:
 
 func enumerate() -> ParallelIterator:
 	return ParallelIterator.new([RangeIterator.unended(), self])
+
+func chain(other: Iterator) -> ChainIterator:
+	return ChainIterator.new(self, other)
