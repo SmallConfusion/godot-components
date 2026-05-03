@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byod7ge3xjwqg"]
 
-[ext_resource type="Texture2D" uid="uid://c3vml4htl1ss7" path="res://assets/components/splash_screen/logo w text.svg" id="1_11ivb"]
-[ext_resource type="Script" uid="uid://bpcanbbmqv1of" path="res://assets/components/splash_screen/splash_screen.gd" id="1_l1q4m"]
+[ext_resource type="Texture2D" uid="uid://c3vml4htl1ss7" path="res://assets/fusionex/splash_screen/logo w text.svg" id="1_11ivb"]
+[ext_resource type="Script" uid="uid://bpcanbbmqv1of" path="res://assets/fusionex/splash_screen/splash_screen.gd" id="1_l1q4m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5xwob"]
 

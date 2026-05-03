@@ -2,7 +2,7 @@
 
 extends Node
 
-const SETTING_RESOURCES = "res://settings"
+const SETTING_RESOURCES = ["res://settings", "res://assets/fusionex/settings/presets"]
 
 const FILEPATH := "user://settings.cfg"
 var config := ConfigFile.new()
@@ -11,7 +11,8 @@ func _ready() -> void:
 	if FileAccess.file_exists(FILEPATH):
 		config.load(FILEPATH)
 	
-	_init_settings(SETTING_RESOURCES)
+	for path in SETTING_RESOURCES:
+		_init_settings(path)
 
 func save() -> void:
 	config.save(FILEPATH)

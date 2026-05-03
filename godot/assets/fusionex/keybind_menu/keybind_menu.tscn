@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btgmrydewjylm"]
 
-[ext_resource type="Script" uid="uid://crtu8euj34jn4" path="res://assets/components/keybind_menu/keybind_menu.gd" id="1_5c24f"]
+[ext_resource type="Script" uid="uid://crtu8euj34jn4" path="res://assets/fusionex/keybind_menu/keybind_menu.gd" id="1_5c24f"]
 
 [node name="KeybindMenu" type="Control" unique_id=1915819721]
 layout_mode = 3

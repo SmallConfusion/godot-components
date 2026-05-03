@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba8wp566ou3np"
-path="res://.godot/imported/FusionListSetting.svg-70c3e1f90e1aed99c347bcc228e0fc60.ctex"
+uid="uid://c3vml4htl1ss7"
+path="res://.godot/imported/logo w text.svg-512cf0c686ff8adacd542ade0e9d221a.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/components/settings/icons/FusionListSetting.svg"
-dest_files=["res://.godot/imported/FusionListSetting.svg-70c3e1f90e1aed99c347bcc228e0fc60.ctex"]
+source_file="res://assets/fusionex/splash_screen/logo w text.svg"
+dest_files=["res://.godot/imported/logo w text.svg-512cf0c686ff8adacd542ade0e9d221a.ctex"]
 
 [params]
 
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -40,5 +39,5 @@ process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
 svg/scale=1.0
-editor/scale_with_editor_scale=true
-editor/convert_colors_with_editor_theme=true
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

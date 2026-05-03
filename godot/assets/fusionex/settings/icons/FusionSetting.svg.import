@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bssogsjegc8mi"
-path="res://.godot/imported/FusionSetting.svg-76100d1582c27cbb9ebe9f8c34a716a0.ctex"
+path="res://.godot/imported/FusionSetting.svg-688dd90477002683c398905a16d7fe21.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/components/settings/icons/FusionSetting.svg"
-dest_files=["res://.godot/imported/FusionSetting.svg-76100d1582c27cbb9ebe9f8c34a716a0.ctex"]
+source_file="res://assets/fusionex/settings/icons/FusionSetting.svg"
+dest_files=["res://.godot/imported/FusionSetting.svg-688dd90477002683c398905a16d7fe21.ctex"]
 
 [params]
 
