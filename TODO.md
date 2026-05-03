@@ -1,1 +1,3 @@
 - Make transitions work in back button in scene manager
+- Explore the possibility of rewriting some or all of fusionex in rust
+- Add a taskfile to add a complete rust extension
