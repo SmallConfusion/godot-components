@@ -1,2 +1,1 @@
-- Make pause menu
 - Make transitions work in back button in scene manager
