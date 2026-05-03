@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c1cbbueueqfq6"]
+
+[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="1_g3sey"]
+[ext_resource type="Script" uid="uid://cd07ugowjm38" path="res://menus/pause.gd" id="1_sxihl"]
+[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="2_yi4q2"]
+[ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://assets/components/ui_components/hide_on_feature.gd" id="3_sxihl"]
+[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://assets/components/ui_components/quit_button.gd" id="4_cmeok"]
+
+[node name="Pause" type="CanvasLayer" unique_id=1696334292]
+process_mode = 3
+script = ExtResource("1_sxihl")
+
+[node name="Panel" type="Panel" parent="." unique_id=890780604]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -445.0
+offset_top = -593.0
+offset_right = 445.0
+offset_bottom = 593.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=679226400]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.20898877
+anchor_top = 0.20898876
+anchor_right = 0.7910112
+anchor_bottom = 0.7910113
+offset_top = -1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Resume" type="Button" parent="Panel/VBoxContainer" unique_id=1825974393]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resume"
+
+[node name="GrabFocus" type="Node" parent="Panel/VBoxContainer/Resume" unique_id=106266356]
+script = ExtResource("1_g3sey")
+metadata/_custom_type_script = "uid://b4xtkvhb57h0p"
+
+[node name="Settings" type="Button" parent="Panel/VBoxContainer" unique_id=1059125554]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="ChangeScene" type="Node" parent="Panel/VBoxContainer/Settings" unique_id=1522474474]
+script = ExtResource("2_yi4q2")
+scene = "uid://86xus34xq57h"
+metadata/_custom_type_script = "uid://die04swyd24gj"
+
+[node name="Credits" type="Button" parent="Panel/VBoxContainer" unique_id=1433335667]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits"
+
+[node name="ChangeScene" type="Node" parent="Panel/VBoxContainer/Credits" unique_id=580669004]
+script = ExtResource("2_yi4q2")
+scene = "uid://eqvcuytu6im7"
+metadata/_custom_type_script = "uid://die04swyd24gj"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=1603419665]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[node name="HideOnFeature" type="Node" parent="Panel/VBoxContainer/Quit" unique_id=221217687]
+script = ExtResource("3_sxihl")
+metadata/_custom_type_script = "uid://dibmctknwmrub"
+
+[node name="QuitButton" type="Node" parent="Panel/VBoxContainer/Quit" unique_id=626963576]
+script = ExtResource("4_cmeok")
+metadata/_custom_type_script = "uid://31ooru6bycsw"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

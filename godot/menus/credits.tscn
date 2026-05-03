@@ -37,13 +37,12 @@ metadata/_custom_type_script = "uid://csuc1e3bcvrof"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2045541156]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 175.0
-offset_top = 38.0
-offset_right = -175.0
-offset_bottom = -184.0
+anchors_preset = -1
+anchor_left = 0.081018515
+anchor_top = 0.017592592
+anchor_right = 0.9189815
+anchor_bottom = 0.91481483
+offset_left = 1.5258789e-05
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
@@ -53,6 +52,7 @@ text = "Game by SmallConfusion
 Godot Engine
 MIT License
 [url]https://godotengine.org/license/[/url]"
+metadata/_edit_use_anchors_ = true
 
 [node name="OpenLink" type="Node" parent="RichTextLabel" unique_id=1273794339]
 script = ExtResource("3_5jbn1")

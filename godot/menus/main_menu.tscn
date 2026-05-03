@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/components/ui_components/change_scene.gd" id="1_8gy84"]
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/components/ui_components/grab_focus.gd" id="1_rqbgu"]
 [ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://assets/components/ui_components/hide_on_feature.gd" id="2_ij7vn"]
+[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://assets/components/scene_manager/circle_transition.tres" id="3_oblsv"]
 [ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://assets/components/ui_components/quit_button.gd" id="3_yjgyn"]
 
 [node name="MainMenu" type="Control" unique_id=222960184]
@@ -35,6 +36,12 @@ text = "Play"
 [node name="GrabFocus" type="Node" parent="VBoxContainer/Play" unique_id=206293085]
 script = ExtResource("1_rqbgu")
 metadata/_custom_type_script = "uid://b4xtkvhb57h0p"
+
+[node name="ChangeScene" type="Node" parent="VBoxContainer/Play" unique_id=723586150]
+script = ExtResource("1_8gy84")
+scene = "uid://d11cjywbkit40"
+transition = ExtResource("3_oblsv")
+metadata/_custom_type_script = "uid://die04swyd24gj"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=2038054733]
 layout_mode = 2

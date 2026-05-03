@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d11cjywbkit40"]
+
+[ext_resource type="Texture2D" uid="uid://dvy2ttp28pgtf" path="res://icon.svg" id="1_mlf6e"]
+[ext_resource type="PackedScene" uid="uid://c1cbbueueqfq6" path="res://menus/Pause.tscn" id="1_po0ka"]
+[ext_resource type="Material" uid="uid://bpv5vjk32086k" path="res://assets/components/texture_enforcer/premultiplied_alpha.tres" id="2_v1wow"]
+
+[sub_resource type="GDScript" id="GDScript_po0ka"]
+script/source = "extends Sprite2D
+
+func _process(delta: float) -> void:
+	rotation += delta
+"
+
+[node name="GameScene" type="Node2D" unique_id=672802704]
+
+[node name="Pause" parent="." unique_id=1696334292 instance=ExtResource("1_po0ka")]
+visible = false
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1594896282]
+material = ExtResource("2_v1wow")
+position = Vector2(681, 443)
+texture = ExtResource("1_mlf6e")
+script = SubResource("GDScript_po0ka")

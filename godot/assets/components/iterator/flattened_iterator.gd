@@ -19,4 +19,3 @@ func _next_one() -> Variant:
 		return null
 	
 	return _next_one()
-	

@@ -49,10 +49,8 @@ func reduce(method: Callable, accum: Variant = null) -> Variant:
 func collect() -> Array[Variant]:
 	var array := []
 	
-	var n: Variant = next()
-	while n != null:
-		array.push_back(n)
-		n = next()
+	for_each(func(value: Variant) -> void:
+		array.push_back(value))
 	
 	return array
 
