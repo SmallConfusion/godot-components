@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://cg3dwil6gki2" path="res://assets/fusionex/settings/presets/master_volume.tres" id="2_d8eyj"]
 [ext_resource type="Resource" uid="uid://c03j67sh7tnp8" path="res://assets/fusionex/settings/presets/music_volume.tres" id="3_cyvjr"]
 [ext_resource type="Resource" uid="uid://me5dsxdfuvqq" path="res://assets/fusionex/settings/presets/sfx_volume.tres" id="4_8754g"]
-[ext_resource type="Theme" uid="uid://ddp03ysx0x6wk" path="res://theme/default_theme.tres" id="5_cyvjr"]
+[ext_resource type="Theme" uid="uid://ddp03ysx0x6wk" path="res://assets/fusionex/theme/default_theme.tres" id="5_cyvjr"]
 [ext_resource type="PackedScene" uid="uid://btgmrydewjylm" path="res://assets/fusionex/keybind_menu/keybind_menu.tscn" id="5_d8eyj"]
 [ext_resource type="Resource" uid="uid://bdjwv86tlptua" path="res://assets/fusionex/settings/presets/vsync.tres" id="5_mf5y3"]
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/fusionex/components/ui_components/grab_focus.gd" id="8_ac0sr"]
