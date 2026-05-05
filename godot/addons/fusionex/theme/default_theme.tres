@@ -1,11 +1,17 @@
-[gd_resource type="Theme" format=3 uid="uid://ddp03ysx0x6wk"]
+[gd_resource type="Theme" format=3 uid="uid://b8pkgxln7hnq0"]
 
-[ext_resource type="FontFile" uid="uid://cq2qyl07qhx4a" path="res://addons/fusionex/theme/BitterPro-Regular.ttf" id="1_ag65a"]
+[ext_resource type="FontFile" uid="uid://cq2qyl07qhx4a" path="res://addons/fusionex/theme/BitterPro-Regular.ttf" id="1_uceko"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uceko"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
 
 [resource]
-default_font = ExtResource("1_ag65a")
-SettingMarginContainer/base_type = &"MarginContainer"
-SettingMarginContainer/constants/margin_bottom = 16
-SettingMarginContainer/constants/margin_left = 16
-SettingMarginContainer/constants/margin_right = 16
-SettingMarginContainer/constants/margin_top = 16
+Control/colors/font_color = Color(0.9647811, 0.97106, 0.96753365, 1)
+Control/colors/font_pressed_color = Color(0.9647059, 0.972549, 0.96862745, 1)
+Control/fonts/font = ExtResource("1_uceko")
+Control/fonts/normal_font = ExtResource("1_uceko")
+Control/styles/panel = SubResource("StyleBoxFlat_uceko")

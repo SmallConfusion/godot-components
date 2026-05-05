@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgl3gq2uxeqd7"]
 
 [ext_resource type="Script" uid="uid://die04swyd24gj" path="res://addons/fusionex/components/ui_components/change_scene.gd" id="1_8gy84"]
+[ext_resource type="Theme" uid="uid://b8pkgxln7hnq0" path="res://addons/fusionex/theme/default_theme.tres" id="1_a63lr"]
 [ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://addons/fusionex/components/ui_components/grab_focus.gd" id="1_rqbgu"]
 [ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://addons/fusionex/components/ui_components/hide_on_feature.gd" id="2_ij7vn"]
 [ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://addons/fusionex/scene_manager/circle_transition.tres" id="3_oblsv"]
@@ -31,6 +32,7 @@ grow_vertical = 2
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=2103782458]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("1_a63lr")
 text = "Play"
 
 [node name="GrabFocus" type="Node" parent="VBoxContainer/Play" unique_id=206293085]

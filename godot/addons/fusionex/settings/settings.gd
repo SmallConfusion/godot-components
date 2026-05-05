@@ -2,7 +2,7 @@
 
 extends Node
 
-const SETTING_RESOURCES = ["res://settings", "res://assets/fusionex/settings/presets"]
+const SETTING_RESOURCES = ["res://settings", "res://addons/fusionex/settings/presets"]
 
 const FILEPATH := "user://settings.cfg"
 var config := ConfigFile.new()
@@ -19,7 +19,11 @@ func save() -> void:
 
 func _init_settings(path: String) -> void:
 	if Engine.is_editor_hint(): return
-
+	
+	if not DirAccess.dir_exists_absolute(path):
+		push_warning("Directory %s does not exist for settings" % path)
+		return
+	
 	var files := DirAccess.get_files_at(path)
 	
 	for file in files:
