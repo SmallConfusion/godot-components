@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c1cbbueueqfq6"]
 
-[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/fusionex/components/ui_components/grab_focus.gd" id="1_g3sey"]
+[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://addons/fusionex/components/ui_components/grab_focus.gd" id="1_g3sey"]
 [ext_resource type="Script" uid="uid://cd07ugowjm38" path="res://menus/pause/pause.gd" id="1_sxihl"]
-[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/fusionex/components/ui_components/change_scene.gd" id="2_yi4q2"]
-[ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://assets/fusionex/components/ui_components/hide_on_feature.gd" id="3_sxihl"]
-[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://assets/fusionex/components/ui_components/quit_button.gd" id="4_cmeok"]
+[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://addons/fusionex/components/ui_components/change_scene.gd" id="2_yi4q2"]
+[ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://addons/fusionex/components/ui_components/hide_on_feature.gd" id="3_sxihl"]
+[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://addons/fusionex/components/ui_components/quit_button.gd" id="4_cmeok"]
 
 [node name="Pause" type="CanvasLayer" unique_id=1696334292]
 process_mode = 3

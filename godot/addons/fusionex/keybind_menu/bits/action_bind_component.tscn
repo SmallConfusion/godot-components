@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2k8fqohfo03d"]
 
-[ext_resource type="Script" uid="uid://c6c5shrojdwt" path="res://assets/fusionex/keybind_menu/bits/action_bind_component.gd" id="1_r5pdp"]
+[ext_resource type="Script" uid="uid://c6c5shrojdwt" path="res://addons/fusionex/keybind_menu/bits/action_bind_component.gd" id="1_r5pdp"]
 
 [node name="ActionBindComponent" type="VBoxContainer" unique_id=65193472]
 script = ExtResource("1_r5pdp")

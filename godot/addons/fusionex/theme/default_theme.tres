@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://ddp03ysx0x6wk"]
 
-[ext_resource type="FontFile" uid="uid://cq2qyl07qhx4a" path="res://assets/fusionex/theme/BitterPro-Regular.ttf" id="1_ag65a"]
+[ext_resource type="FontFile" uid="uid://cq2qyl07qhx4a" path="res://addons/fusionex/theme/BitterPro-Regular.ttf" id="1_ag65a"]
 
 [resource]
 default_font = ExtResource("1_ag65a")

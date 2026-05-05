@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy8vr1qbrgnf1"]
 
-[ext_resource type="Script" uid="uid://b0fliwjg6b3kf" path="res://assets/fusionex/keybind_menu/bits/binding_component.gd" id="1_rxk21"]
+[ext_resource type="Script" uid="uid://b0fliwjg6b3kf" path="res://addons/fusionex/keybind_menu/bits/binding_component.gd" id="1_rxk21"]
 
 [node name="BindingComponent" type="HBoxContainer" unique_id=1254194868]
 script = ExtResource("1_rxk21")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dvy2ttp28pgtf" path="res://icon.svg" id="1_mlf6e"]
 [ext_resource type="PackedScene" uid="uid://c1cbbueueqfq6" path="res://menus/pause/pause.tscn" id="1_po0ka"]
-[ext_resource type="Material" uid="uid://bpv5vjk32086k" path="res://assets/fusionex/texture_enforcer/premultiplied_alpha.tres" id="2_v1wow"]
+[ext_resource type="Material" uid="uid://bpv5vjk32086k" path="res://addons/fusionex/texture_enforcer/premultiplied_alpha.tres" id="2_v1wow"]
 
 [sub_resource type="GDScript" id="GDScript_po0ka"]
 script/source = "extends Sprite2D

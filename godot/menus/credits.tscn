@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://eqvcuytu6im7"]
 
-[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/fusionex/components/ui_components/grab_focus.gd" id="2_5jbn1"]
-[ext_resource type="Script" uid="uid://csuc1e3bcvrof" path="res://assets/fusionex/components/ui_components/back_button.gd" id="2_gknjt"]
-[ext_resource type="Script" uid="uid://djjyhf3m5sukp" path="res://assets/fusionex/components/ui_components/open_link.gd" id="3_5jbn1"]
+[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://addons/fusionex/components/ui_components/grab_focus.gd" id="2_5jbn1"]
+[ext_resource type="Script" uid="uid://csuc1e3bcvrof" path="res://addons/fusionex/components/ui_components/back_button.gd" id="2_gknjt"]
+[ext_resource type="Script" uid="uid://djjyhf3m5sukp" path="res://addons/fusionex/components/ui_components/open_link.gd" id="3_5jbn1"]
 
 [node name="Credits" type="Control" unique_id=474698390]
 layout_mode = 3

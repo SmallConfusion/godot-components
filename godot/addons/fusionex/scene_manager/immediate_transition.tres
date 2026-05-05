@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ScreenTransitionSet" format=3 uid="uid://2grwx77qo4l4"]
 
-[ext_resource type="Script" uid="uid://1ajt73h78qxt" path="res://assets/fusionex/scene_manager/screen_transition.gd" id="1_0vc7t"]
-[ext_resource type="Script" uid="uid://da1ab2niag61d" path="res://assets/fusionex/scene_manager/sceen_transition_set.gd" id="1_rf2fd"]
-[ext_resource type="Texture2D" uid="uid://nl0cnqq6ww5a" path="res://assets/fusionex/scene_manager/trans1.exr" id="2_p1lau"]
+[ext_resource type="Script" uid="uid://1ajt73h78qxt" path="res://addons/fusionex/scene_manager/screen_transition.gd" id="1_0vc7t"]
+[ext_resource type="Script" uid="uid://da1ab2niag61d" path="res://addons/fusionex/scene_manager/sceen_transition_set.gd" id="1_rf2fd"]
+[ext_resource type="Texture2D" uid="uid://nl0cnqq6ww5a" path="res://addons/fusionex/scene_manager/trans1.exr" id="2_p1lau"]
 
 [sub_resource type="Resource" id="Resource_p1lau"]
 script = ExtResource("1_0vc7t")

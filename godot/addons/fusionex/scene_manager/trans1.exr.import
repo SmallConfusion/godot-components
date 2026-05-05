@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nl0cnqq6ww5a"
-path.bptc="res://.godot/imported/trans1.exr-6d5a4e9686fa6e8ae06ce23feb65ec8f.bptc.ctex"
+path.bptc="res://.godot/imported/trans1.exr-e3b287bf5ef2c6b20b70782afd8c1ec3.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/fusionex/scene_manager/trans1.exr"
-dest_files=["res://.godot/imported/trans1.exr-6d5a4e9686fa6e8ae06ce23feb65ec8f.bptc.ctex"]
+source_file="res://addons/fusionex/scene_manager/trans1.exr"
+dest_files=["res://.godot/imported/trans1.exr-e3b287bf5ef2c6b20b70782afd8c1ec3.bptc.ctex"]
 
 [params]
 

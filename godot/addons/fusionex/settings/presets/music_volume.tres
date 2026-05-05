@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RangeSetting" format=3 uid="uid://c03j67sh7tnp8"]
 
-[ext_resource type="Script" uid="uid://bvn8up4ojt8t1" path="res://assets/fusionex/settings/resource/range_setting.gd" id="1_56mwy"]
+[ext_resource type="Script" uid="uid://bvn8up4ojt8t1" path="res://addons/fusionex/settings/resource/range_setting.gd" id="1_56mwy"]
 
 [sub_resource type="GDScript" id="GDScript_oqbox"]
 script/source = "static func apply_setting(value: Variant) -> void:

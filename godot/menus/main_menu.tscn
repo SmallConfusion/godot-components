@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bgl3gq2uxeqd7"]
 
-[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://assets/fusionex/components/ui_components/change_scene.gd" id="1_8gy84"]
-[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://assets/fusionex/components/ui_components/grab_focus.gd" id="1_rqbgu"]
-[ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://assets/fusionex/components/ui_components/hide_on_feature.gd" id="2_ij7vn"]
-[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://assets/fusionex/scene_manager/circle_transition.tres" id="3_oblsv"]
-[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://assets/fusionex/components/ui_components/quit_button.gd" id="3_yjgyn"]
+[ext_resource type="Script" uid="uid://die04swyd24gj" path="res://addons/fusionex/components/ui_components/change_scene.gd" id="1_8gy84"]
+[ext_resource type="Script" uid="uid://b4xtkvhb57h0p" path="res://addons/fusionex/components/ui_components/grab_focus.gd" id="1_rqbgu"]
+[ext_resource type="Script" uid="uid://dibmctknwmrub" path="res://addons/fusionex/components/ui_components/hide_on_feature.gd" id="2_ij7vn"]
+[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://addons/fusionex/scene_manager/circle_transition.tres" id="3_oblsv"]
+[ext_resource type="Script" uid="uid://31ooru6bycsw" path="res://addons/fusionex/components/ui_components/quit_button.gd" id="3_yjgyn"]
 
 [node name="MainMenu" type="Control" unique_id=222960184]
 layout_mode = 3

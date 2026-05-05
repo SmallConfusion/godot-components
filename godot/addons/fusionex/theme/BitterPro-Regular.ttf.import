@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cq2qyl07qhx4a"
-path="res://.godot/imported/BitterPro-Regular.ttf-20e76288e046125c7256d0168d74ca63.fontdata"
+path="res://.godot/imported/BitterPro-Regular.ttf-44a80c4495f45ab7d25c92390ec70876.fontdata"
 
 [deps]
 
-source_file="res://assets/fusionex/theme/BitterPro-Regular.ttf"
-dest_files=["res://.godot/imported/BitterPro-Regular.ttf-20e76288e046125c7256d0168d74ca63.fontdata"]
+source_file="res://addons/fusionex/theme/BitterPro-Regular.ttf"
+dest_files=["res://.godot/imported/BitterPro-Regular.ttf-44a80c4495f45ab7d25c92390ec70876.fontdata"]
 
 [params]
 
