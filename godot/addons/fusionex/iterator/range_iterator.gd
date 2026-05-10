@@ -1,3 +1,5 @@
+## An iterator over a range of ints.
+
 class_name RangeIterator
 extends Iterator
 

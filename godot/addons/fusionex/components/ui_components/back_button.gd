@@ -1,3 +1,6 @@
+## Hooks into [SceneManager] to go back on click. Expects `component_holder` to
+## be a [Button].
+
 class_name BackButton
 extends Component
 

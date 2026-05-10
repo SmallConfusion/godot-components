@@ -1,3 +1,5 @@
+## Hides its holder on ready if the feature tag is present.
+
 class_name HideOnFeature
 extends Component
 
@@ -5,5 +7,7 @@ extends Component
 
 func _ready() -> void:
 	super._ready()
+	
 	if OS.has_feature(feature):
-		component_holder.visible = false
+		var visible_holder: CanvasItem = component_holder
+		visible_holder.visible = false

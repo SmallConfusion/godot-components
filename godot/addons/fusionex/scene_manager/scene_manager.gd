@@ -13,6 +13,7 @@ var scene_stack: Array[Node] = []
 func _ready() -> void:
 	visible = false
 
+## Clears the stack of scenes to go back to.
 func clear_stack() -> void:
 	scene_stack = []
 
@@ -24,6 +25,7 @@ func back() -> void:
 	var scene: Node = scene_stack.pop_back()
 	get_tree().change_scene_to_node(scene)
 
+## The change scene function. Use this to change scenes.
 func change_scene(scene: String, transition_set: ScreenTransitionSet = preload("uid://2grwx77qo4l4")) -> void:
 	ResourceLoader.load_threaded_request(scene)
 	visible = true

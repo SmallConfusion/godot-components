@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bfvrrrjo8sj3n" path="res://addons/fusionex/scene_manager/scene_manager.gd" id="1_jfh72"]
 [ext_resource type="Texture2D" uid="uid://dvy2ttp28pgtf" path="res://icon.svg" id="2_cgd8i"]
 [ext_resource type="Shader" uid="uid://ddao7l5r8h4ut" path="res://addons/fusionex/scene_manager/transition_shader.gdshader" id="2_njgca"]
-[ext_resource type="Resource" uid="uid://biaph7cc4gogh" path="res://addons/fusionex/scene_manager/circle_transition.tres" id="2_r8bws"]
 [ext_resource type="Texture2D" uid="uid://nl0cnqq6ww5a" path="res://addons/fusionex/scene_manager/trans1.exr" id="3_cgd8i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r8bws"]
@@ -18,7 +17,6 @@ process_mode = 3
 layer = 99999
 visible = false
 script = ExtResource("1_jfh72")
-transition_set = ExtResource("2_r8bws")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=692988538]
 texture_filter = 1

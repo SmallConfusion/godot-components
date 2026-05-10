@@ -1,3 +1,5 @@
+## Makes all 2d elements use a premultiplied alpha material if it has no material set.
+
 @tool
 extends Node
 

@@ -1,3 +1,5 @@
+## This functions as a tetris style random bag.
+
 class_name RandomBag
 extends Resource
 

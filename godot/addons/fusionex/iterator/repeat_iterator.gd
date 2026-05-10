@@ -1,3 +1,5 @@
+## An iterator that repeats a value a number of times.
+
 class_name RepeatIterator
 extends Iterator
 

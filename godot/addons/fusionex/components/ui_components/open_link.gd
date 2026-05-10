@@ -1,3 +1,5 @@
+## To be attached to a [RichTextLabel]. It will open urls and probably other things.
+
 class_name OpenLink
 extends Component
 

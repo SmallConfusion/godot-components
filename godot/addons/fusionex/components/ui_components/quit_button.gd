@@ -1,3 +1,5 @@
+## Quits the game. Expects component_holder to be a [Button].
+
 class_name QuitButton
 extends Component
 

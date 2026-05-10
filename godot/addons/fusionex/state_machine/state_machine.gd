@@ -1,4 +1,4 @@
-class_name Machine
+class_name StateMachine
 
 signal change_state(old: State, new: State)
 

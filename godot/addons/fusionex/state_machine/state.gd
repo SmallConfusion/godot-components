@@ -1,3 +1,5 @@
+## A state machine state. To be used with [StateMachine].
+
 class_name State
 
 @warning_ignore("unused_signal")
@@ -18,6 +20,9 @@ static func _call_with_maybe_arg(f: Callable, arg: Variant) -> Variant:
 	else:
 		return f.call(arg)
 
+## Tick is a callable that takes no arguments.
+## Enter is a callable that takes either no arguments or the previous state.
+## Exit is a callable that takes either no arguments or the previous state.
 func _init(p_tick := _noop, p_enter := _noop, p_exit := _noop) -> void:
 	_enter = p_enter
 	_tick = p_tick

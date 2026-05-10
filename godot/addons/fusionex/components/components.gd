@@ -1,7 +1,8 @@
 class_name Components
 extends RefCounted
 
-## Component must have `NAME: StringName`
+## A helper function for setting the component on a node.
+## Component must have `NAME: StringName`.
 static func set_component(object: Object, component: Object):
 	var name: StringName = component.NAME
 	
@@ -14,8 +15,8 @@ static func set_component(object: Object, component: Object):
 		object.tree_exiting.connect(func():
 			object.remove_meta(component.NAME)
 		)
-	
 
+## Gets the component on the object, or returns null if it doesn't exist.
 static func get_on(object: Object, name: StringName) -> Variant:
 	if object.has_meta(name):
 		return object.get_meta(name)

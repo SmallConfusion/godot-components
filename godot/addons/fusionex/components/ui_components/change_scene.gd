@@ -1,3 +1,6 @@
+## Hooks into [SceneManager] to change scenes. Expects `component_holder` to be
+## a [Button].
+
 class_name ChangeScene
 extends Component
 

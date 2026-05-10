@@ -1,3 +1,6 @@
+## Calls grab_focus() on its holder on ready and on enter tree. Expects
+## `component_holder` to be a [Control].
+
 class_name GrabFocus
 extends Component
 

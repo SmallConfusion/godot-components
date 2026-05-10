@@ -1,4 +1,8 @@
 @tool
+
+## Automatically sets up and connects a ui element for the setting resource.
+## Currently cannot really be customized very well.
+
 class_name FusionSettingDisplay
 extends HBoxContainer
 
