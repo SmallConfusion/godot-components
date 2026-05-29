@@ -1,1 +1,0 @@
-- Make transitions work in back button in scene manager

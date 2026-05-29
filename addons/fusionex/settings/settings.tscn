@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dntf3f3rvemgf"]
+
+[ext_resource type="Script" uid="uid://crho604ktqtrd" path="res://addons/fusionex/settings/settings.gd" id="1_p4fwl"]
+[ext_resource type="Resource" uid="uid://cg3dwil6gki2" path="res://addons/fusionex/settings/presets/master_volume.tres" id="2_vlr2a"]
+[ext_resource type="Resource" uid="uid://c03j67sh7tnp8" path="res://addons/fusionex/settings/presets/music_volume.tres" id="3_slxdq"]
+[ext_resource type="Resource" uid="uid://me5dsxdfuvqq" path="res://addons/fusionex/settings/presets/sfx_volume.tres" id="4_alx8y"]
+
+[node name="Settings" type="Node" unique_id=1895334178]
+script = ExtResource("1_p4fwl")
+apply_on_load = Array[Resource]([ExtResource("2_vlr2a"), ExtResource("3_slxdq"), ExtResource("4_alx8y")])
