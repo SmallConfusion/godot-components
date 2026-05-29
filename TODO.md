@@ -1,0 +1,2 @@
+- Automatic itch.io upload
+
