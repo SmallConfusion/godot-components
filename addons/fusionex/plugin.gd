@@ -29,6 +29,7 @@ func _disable_plugin() -> void:
 
 func _enter_tree() -> void:
 	add_command("Create GDExtesion", create_extension)
+	add_command("Open godot-rust book", OS.shell_open.bind("https://godot-rust.github.io/book/intro/hello-world.html"))
 
 func _exit_tree() -> void:
 	clear_commands()
